@@ -1,0 +1,25 @@
+/***********************todo DASH*************************/
+.nav {
+  display: flex;
+  background-color:rgb(2, 6, 32);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 20rem;
+  height: 2rem;
+  
+}
+
+.banner {
+  background-color: rgb(69, 13, 172);
+  width: 100rem;
+  height: 10rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.banner-text {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-90%, -50%);
+  color: white;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow card">
+            <div class="card-body">
+                {% for d in detail %}
+                <p>Task Name : <b>{{ d.task_name }}</b></p>
+                <p>Priority:<b>{{ d.Priority }}</b></p>
+                <p>Date: <b>{{ d.date }}</b></p>
+                <a class="btn btn-danger" href="{% url 'delete' d.id %}">Delete</a>
+                <a class="btn btn-success" href="{% url 'task_view' %}">ADD TASK</a>
+                <a class="btn btn-danger" href="{% url 'edit' d.id %}">Edit</a>
+
+                {% endfor %}
+
+            </div>
+                </div>
+{% endblock %}

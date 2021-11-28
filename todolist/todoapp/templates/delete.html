@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- <form method="post">
+    {% csrf_token %} -->
+    {% for d in delete %}
+    <p>Task Name : <b>{{ d.task_name }}</b></p>
+    <p>Priority:<b>{{ d.Priority }}</b></p>
+    <p>Date: <b>{{ d.date }}</b></p>   
+    <h3>Are you sure?</h3>
+    <a href="{% url 'cdelete' d.id  %}"><button type="submit">YES</button></a>
+    <a href="{% url 'detail'   %}"><button type="submit">NO</button></a>
+
+    {% endfor %}
+
+<!-- </form> -->
+{% endblock %}
