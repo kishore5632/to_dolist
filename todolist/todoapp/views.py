@@ -35,13 +35,10 @@ def task_view(request):
         tname = request.POST["name"]
         priority = request.POST["priority"]
         date = request.POST["date"]
-        s = Task(task_name= tname,Priority=priority,date=date,)
+        s = Task(task_name= tname,Priority=priority,date=date)
         s.save()
-        return HttpResponseRedirect("redirect")
-    else:
-        task = Task.objects.all()
 
-    return render(request,"task_view.html",{'task':task})
+    return render(request,"task_view.html")
 
 def redirect(request):
     return render(request,"redirect.html")
