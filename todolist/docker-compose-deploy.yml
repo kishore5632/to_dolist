@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  todolist:
+    build:
+      context: .
+    volumes:
+      - static_data:/vol/web
+   
+
+  proxy:
+    build:
+      context: ./proxy
+    volumes:
+      - static_data:/vol/static
+    ports:
+      - "8080:8080"
+    depends_on:
+      - todolist
+
+volumes:
+  static_data:
